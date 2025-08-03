@@ -29,11 +29,11 @@
 
             <div class="menu">
                 <nav>
-                    <a href="index.html" class="active">Inicio</a>
-                    <a href="#aboutme">Acerca de mí</a>
-                    <a href="#technologies">Tecnologías</a>
-                    <a href="#projects">Proyectos</a>
-                    <a href="#contact">Contacto</a>
+                    <a href="#home"  class="nav-link" class="active">Inicio</a>
+                    <a href="#aboutme" class="nav-link">Acerca de mí</a>
+                    <a href="#technologies" class="nav-link">Tecnologías</a>
+                    <a href="#projects" class="nav-link">Proyectos</a>
+                    <a href="#contact" class="nav-link">Contacto</a>
                 </nav>
             </div>
         </div>
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="photo-content">
-
+                <img src="recursos/foto.jpeg" alt="foto">
             </div>
         </section>
 
@@ -348,25 +348,26 @@
 
         <section id="contact" class="contact">
             <h2>Contacto</h2>
-            <div id="contact-form">
-                <form action="https://formspree.io/f/xyzpddpa" method="POST">
+            <div>
+                <form id="contact-form" action="https://formspree.io/f/xyzpddpa" method="POST">
                     <fieldset>
                         <legend>Nombre *</legend>
-                        <input type="text" name="nombre">
+                        <input type="text" name="nombre" required>
                     </fieldset>
                     <fieldset>
                         <legend>Email *</legend>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </fieldset>
                     <fieldset>
                         <legend>Teléfono *</legend>
-                        <input type="tel" name="telefono">
+                        <input type="tel" name="telefono" required>
                     </fieldset>
                     <fieldset>
                         <legend>Mensaje *</legend>
-                        <textarea name="mensaje" id="mensaje"></textarea>
+                        <textarea name="mensaje" id="mensaje" required></textarea>
                     </fieldset>
                     <div class="button-form"><button type="submit">Enviar</button></div>
+                    <p id="form-message" ></p>
                 </form>
 
             </div>
@@ -381,6 +382,7 @@
         <p>© 2023 Eduardo Olea Rosas.</p>
         <p>Designed by Eduardo Olea</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>

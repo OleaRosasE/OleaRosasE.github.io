@@ -162,6 +162,17 @@ body {
 .photo-content {
     flex: 1;
 }
+.photo-content{
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    img{
+        width: 300px;
+        height: auto;
+
+    }
+}
 
 .redes {
     position: absolute;
@@ -389,7 +400,7 @@ form {
     background-color: #13263a;
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 2px solid #ededed;
+    border: 2px solid #00abf0;
     border-radius: 10px;
 
     button{
@@ -418,6 +429,10 @@ form {
     display: flex;
     justify-content: flex-end;
 
+}
+
+#form-message{
+    display: none   ;
 }
 
 input,
