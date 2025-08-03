@@ -317,7 +317,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-background-color: pink;
 }
 
 .project-img {
@@ -330,7 +329,6 @@ background-color: pink;
     img {
         width: 300px;
     }
-    background-color: gold;
 }
 
 .enlaces {
@@ -338,8 +336,6 @@ background-color: pink;
     display: flex;
     justify-content: end;
     padding: 0 5%;
-
-    background-color: orange;
 }
 
 .enlace {
@@ -359,7 +355,6 @@ background-color: pink;
     color: #ededed;
     transition: 0.4s;
     }
-    background-color: green;
 }
 
 .technology-button {
@@ -375,7 +370,6 @@ background-color: pink;
         width: 24px;
         fill: #ededed;
     }
-    background-color: yellowgreen;
 }
 
 
@@ -397,6 +391,33 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid #ededed;
     border-radius: 10px;
+
+    button{
+        margin: 0;
+        width: 8rem;
+        text-align: center;
+        justify-content: center;
+        display: inline-block;
+        padding: 10px 5px;
+
+        font-size: 18px;
+        color: #00abf0;
+        border: 2px solid #00abf0;
+        border-radius: 7px;
+        background-color: transparent;
+    }
+    button:hover{
+        transition:  0.4s;
+        background-color: #00abf0;
+        color: #ededed;
+        cursor: pointer;
+    }
+}
+.button-form{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 input,
