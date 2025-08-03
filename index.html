@@ -349,10 +349,10 @@
         <section id="contact" class="contact">
             <h2>Contacto</h2>
             <div id="contact-form">
-                <form action="">
+                <form action="https://formspree.io/f/xyzpddpa" method="POST">
                     <fieldset>
                         <legend>Nombre *</legend>
-                        <input type="text">
+                        <input type="text" name="nombre">
                     </fieldset>
                     <fieldset>
                         <legend>Email *</legend>
@@ -360,12 +360,13 @@
                     </fieldset>
                     <fieldset>
                         <legend>Teléfono *</legend>
-                        <input type="tel">
+                        <input type="tel" name="telefono">
                     </fieldset>
                     <fieldset>
                         <legend>Mensaje *</legend>
                         <textarea name="mensaje" id="mensaje"></textarea>
                     </fieldset>
+                    <button type="submit">Enviar</button>
                 </form>
 
             </div>
