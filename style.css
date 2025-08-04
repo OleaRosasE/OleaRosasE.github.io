@@ -19,7 +19,7 @@ body {
 /*========================== HEADER =======================*/
 .header {
     width: 100%;
-    min-width: 440px;
+    min-width: 380px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -38,11 +38,12 @@ body {
 }
 
 .languages {
-    min-width: 170px;
+    min-width: 160px;
     display: flex;
     flex: 0.5;
     justify-content: space-evenly;
     align-items: center;
+    background-color: pink;
 }
 
 .language {
@@ -63,8 +64,7 @@ body {
 
 .logo,
 .menu {
-
-    min-width: 160px;
+    min-width: 200px;
     flex: 4.7;
 }
 
@@ -104,9 +104,11 @@ body {
 .home {
     height: 100vh;
     display: flex;
+    flex-wrap: wrap ;
     align-items: center;
-    padding: 0 10%;
-
+    gap: 100px;
+    padding: 20% 10%;
+    background-color: green ;
     h1 {
         font-size: 56px;
         font-weight: 700;
@@ -160,6 +162,7 @@ body {
 
 .home-content,
 .photo-content {
+    min-width: 300px;
     flex: 1;
 }
 .photo-content{
@@ -244,7 +247,7 @@ body {
 .project-content {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
 }
 
@@ -448,12 +451,12 @@ textarea {
 
 fieldset {
     padding: 0;
-    border: 2px solid #ededed;
+    border: 2px solid #00abf0;
     border-radius: 5px;
 }
 
 fieldset:focus-within {
-    border-color: #00abf0;
+    border-color: #ededed;
 }
 
 input:focus,
