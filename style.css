@@ -71,11 +71,11 @@ body {
     font-size: 25px;
     font-weight: bold;
     box-sizing: border-box;
+}
 
-    a {
-        color: #ededed;
-        font-weight: 600;
-    }
+.logo a {
+    color: #ededed;
+    font-weight: 600;
 }
 
 .menu nav {
@@ -106,21 +106,21 @@ a.active {
     align-items: center;
     justify-content: center;
     padding: 0 10%;
+}
 
-    h1 {
-        font-size: 56px;
-        font-weight: 700;
-    }
+.home h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
 
-    h3 {
-        font-size: 34px;
-        font-weight: 700;
-        color: #00abf0;
-    }
+.home h3 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #00abf0;
+}
 
-    p {
-        font-size: 18px;
-    }
+.home p {
+    font-size: 18px;
 }
 
 .home-content,
@@ -208,13 +208,30 @@ a.active {
     min-height: 100vh;
     padding: 5% 10%;
     gap: 20px;
+}
 
+.aboutme h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #00abf0;
+}
 
-    h2 {
-        font-size: 34px;
-        font-weight: 700;
-        color: #00abf0;
-    }
+.technologies h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.projects h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.contact h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #00abf0;
 }
 
 /*========================== ABOUT ME =======================*/
@@ -255,10 +272,10 @@ a.active {
     justify-content: start;
     align-items: center;
     gap: 20px;
+}
 
-    h3 {
-        font-size: 28px;
-    }
+.technology-main h3 {
+    font-size: 28px;
 }
 
 .technology-block {
@@ -289,10 +306,10 @@ a.active {
     gap: 10px;
 
     transition: 0.4s;
+}
 
-    svg {
-        width: 52px;
-    }
+.technology svg {
+    width: 52px;
 }
 
 .technology:hover {
@@ -317,12 +334,11 @@ a.active {
     border: 2px solid #00abf0;
     border-radius: 10px;
     background-color: #13263a;
+}
 
-    h3 {
-        color: #ededed;
-        font-size: 28px;
-    }
-
+.project-card h3 {
+    color: #ededed;
+    font-size: 28px;
 }
 
 .project-technologies {
@@ -339,10 +355,10 @@ a.active {
     display: flex;
     justify-content: center;
     border-radius: 7px;
+}
 
-    img {
-        width: 300px;
-    }
+.project-img img {
+    width: 300px;
 }
 
 .enlaces {
@@ -355,21 +371,25 @@ a.active {
 .enlace {
     width: 110px;
 
-    a {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        color: #00abf0;
-        padding: 5px;
-        border: 2px solid #00abf0;
-        border-radius: 7px;
-    }
 
-    a:hover {
-        background-color: #00abf0;
-        color: #ededed;
-        transition: 0.4s;
-    }
+
+
+}
+
+.enlace a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #00abf0;
+    padding: 5px;
+    border: 2px solid #00abf0;
+    border-radius: 7px;
+}
+
+.enlace a:hover {
+    background-color: #00abf0;
+    color: #ededed;
+    transition: 0.4s;
 }
 
 .technology-button {
@@ -380,11 +400,11 @@ a.active {
     align-items: center;
     border: 1px solid #ededed;
     border-radius: 9px;
+}
 
-    svg {
-        width: 24px;
-        fill: #ededed;
-    }
+.technology-button svg {
+    width: 24px;
+    fill: #ededed;
 }
 
 /*=================== Contact Form ================*/
@@ -405,57 +425,34 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid #00abf0;
     border-radius: 10px;
+}
 
-    button {
-        margin: 0;
-        width: 8rem;
-        text-align: center;
-        justify-content: center;
-        display: inline-block;
-        padding: 10px 5px;
+form button {
+    margin: 0;
+    width: 8rem;
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+    padding: 10px 5px;
 
-        font-size: 18px;
-        color: #00abf0;
-        border: 2px solid #00abf0;
-        border-radius: 7px;
-        background-color: transparent;
-    }
+    font-size: 18px;
+    color: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 7px;
+    background-color: transparent;
+}
 
-    button:hover {
-        transition: 0.4s;
-        background-color: #00abf0;
-        color: #ededed;
-        cursor: pointer;
-    }
-
+form button:hover {
+    transition: 0.4s;
+    background-color: #00abf0;
+    color: #ededed;
+    cursor: pointer;
 }
 
 .button-form {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-
-    a {
-        margin: 0;
-        width: 8rem;
-        text-align: center;
-        justify-content: center;
-        display: inline-block;
-        padding: 10px 5px;
-
-        font-size: 18px;
-        color: #00abf0;
-        border: 2px solid #00abf0;
-        border-radius: 7px;
-        background-color: transparent;
-    }
-
-    a:hover {
-        transition: 0.4s;
-        background-color: #00abf0;
-        color: #ededed;
-        cursor: pointer;
-    }
 }
 
 #form-message {
@@ -498,8 +495,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
-    a {
-        color: #ededed;
-    }
+footer a {
+    color: #ededed;
 }
