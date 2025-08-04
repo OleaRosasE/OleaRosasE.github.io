@@ -4,7 +4,7 @@
     box-sizing: border-box;
 
     font-family: 'Poppins', sans-serif;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 html {
@@ -102,13 +102,13 @@ body {
 
 /*========================== HOME =======================*/
 .home {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 100px;
-    padding: 20% 10%;
-    background-color: green ;
+    justify-content: center;
+    padding: 0 10%;
+
     h1 {
         font-size: 56px;
         font-weight: 700;
@@ -125,9 +125,36 @@ body {
     }
 }
 
+.home-content,
+.photo-content {
+    min-width: 300px;
+    flex: 1;
+}
+
+
 .home-content p {
     margin: 20px 0 40px;
 }
+
+.redes {
+    margin: 5% 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.redes svg {
+    fill: #00abf0;
+    width: 70px;
+    height: 70px;
+    transition: 0.4s;
+}
+
+.redes a:hover {
+    fill: #ededed;
+    transform: scale(1.1);
+}
+
 
 .buttons-box {
     width: 20rem;
@@ -160,42 +187,15 @@ body {
     transition: 0.4s;
 }
 
-.home-content,
 .photo-content {
-    min-width: 300px;
-    flex: 1;
-}
-.photo-content{
-
     display: flex;
     justify-content: center;
     align-content: center;
-    img{
+
+    img {
         width: 300px;
         height: auto;
-
     }
-}
-
-.redes {
-    position: absolute;
-    bottom: 40px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.redes svg {
-    fill: #00abf0;
-    width: 70px;
-    height: 70px;
-    transition: 0.4s;
-}
-
-.redes a:hover {
-    fill: #ededed;
-    transform: scale(1.1);
 }
 
 .aboutme,
@@ -209,7 +209,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding: 5% 10%;
-    gap: 20px ;
+    gap: 20px;
 
 
     h2 {
@@ -257,7 +257,7 @@ body {
     justify-content: start;
     align-items: center;
     gap: 20px;
-    
+
     h3 {
         font-size: 28px;
     }
@@ -266,7 +266,7 @@ body {
 .technology-block {
     width: 100%;
     height: auto;
-    min-height: 270px;   
+    min-height: 270px;
 
     display: flex;
     flex-wrap: wrap;
@@ -275,7 +275,7 @@ body {
     gap: 50px;
     padding: 5%;
 
-    background-color: #13263a;    
+    background-color: #13263a;
     border: 2px solid #00abf0;
     border-radius: 7px;
 }
@@ -302,10 +302,11 @@ body {
 }
 
 
-/*============= Proyectos================*/
-.project-content{
+/*================ Proyectos ================*/
+.project-content {
     padding: 5% 0;
 }
+
 .project-card {
 
     display: flex;
@@ -313,20 +314,20 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding: 5%;    
+    padding: 5%;
     overflow: hidden;
     border: 2px solid #00abf0;
     border-radius: 10px;
-   background-color: #13263a;
+    background-color: #13263a;
 
     h3 {
         color: #ededed;
         font-size: 28px;
     }
- 
+
 }
 
-.project-technologies{
+.project-technologies {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -340,6 +341,7 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 7px;
+
     img {
         width: 300px;
     }
@@ -364,10 +366,11 @@ body {
         border: 2px solid #00abf0;
         border-radius: 7px;
     }
-    a:hover{
+
+    a:hover {
         background-color: #00abf0;
-    color: #ededed;
-    transition: 0.4s;
+        color: #ededed;
+        transition: 0.4s;
     }
 }
 
@@ -386,8 +389,7 @@ body {
     }
 }
 
-
-
+/*=================== Contact Form ================*/
 form {
     box-sizing: border-box;
     margin: 0;
@@ -406,7 +408,7 @@ form {
     border: 2px solid #00abf0;
     border-radius: 10px;
 
-    button{
+    button {
         margin: 0;
         width: 8rem;
         text-align: center;
@@ -420,27 +422,51 @@ form {
         border-radius: 7px;
         background-color: transparent;
     }
-    button:hover{
-        transition:  0.4s;
+
+    button:hover {
+        transition: 0.4s;
+        background-color: #00abf0;
+        color: #ededed;
+        cursor: pointer;
+    }
+
+}
+
+.button-form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+        margin: 0;
+        width: 8rem;
+        text-align: center;
+        justify-content: center;
+        display: inline-block;
+        padding: 10px 5px;
+
+        font-size: 18px;
+        color: #00abf0;
+        border: 2px solid #00abf0;
+        border-radius: 7px;
+        background-color: transparent;
+    }
+
+    a:hover {
+        transition: 0.4s;
         background-color: #00abf0;
         color: #ededed;
         cursor: pointer;
     }
 }
-.button-form{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
 
-}
-
-#form-message{
-    display: none   ;
+#form-message {
+    display: none;
 }
 
 input,
 textarea {
-    width: 20rem;
+    width: 18rem;
     height: auto;
     padding: 0.5em 1em;
     border: 0;
@@ -474,7 +500,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    a{
+
+    a {
         color: #ededed;
     }
 }
