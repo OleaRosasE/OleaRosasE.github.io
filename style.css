@@ -63,8 +63,8 @@ body {
 
 .logo,
 .menu {
-    min-width: 200px;
-    flex: 4.7;
+    min-width: 180px;
+    flex: 4;
 }
 
 .logo {
@@ -94,7 +94,7 @@ body {
 }
 
 .menu nav a:hover,
-a.active {
+.menu a.active {
     color: #00abf0;
 }
 
@@ -105,7 +105,7 @@ a.active {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
+    padding: 10%;
 }
 
 .home h1 {
@@ -189,11 +189,11 @@ a.active {
     display: flex;
     justify-content: center;
     align-content: center;
+}
 
-    img {
-        width: 300px;
-        height: auto;
-    }
+.photo-content img {
+    width: 300px;
+    height: auto;
 }
 
 .aboutme,
@@ -241,7 +241,6 @@ a.active {
     justify-content: center;
     align-items: start;
     gap: 50px;
-
 }
 
 .aboutme-description,
@@ -254,7 +253,6 @@ a.active {
     align-items: center;
     gap: 20px;
     line-height: 1.6;
-
 }
 
 /*========================== TECHNOLOGIES =======================*/
