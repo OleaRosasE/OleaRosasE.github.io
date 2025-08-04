@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 3%;
+    padding: 10px 3%;
     gap: 20px;
 
     position: fixed;
@@ -38,7 +38,7 @@ body {
 }
 
 .languages {
-    min-width: 160px;
+    min-width: 140px;
     display: flex;
     flex: 0.5;
     justify-content: space-evenly;
@@ -100,12 +100,12 @@ body {
 
 /*========================== HOME =======================*/
 .home {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 10%;
+    padding: 17% 10% 60px;
 }
 
 .home h1 {
@@ -186,6 +186,7 @@ body {
 }
 
 .photo-content {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -205,9 +206,10 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
-    padding: 5% 10%;
+    min-height: 80vh;
+    padding: 20px 10%;
     gap: 20px;
+
 }
 
 .aboutme h2 {
@@ -423,6 +425,7 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid #00abf0;
     border-radius: 10px;
+    
 }
 
 form button {
@@ -493,6 +496,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px 0 ;
 }
 
 footer a {
