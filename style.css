@@ -31,14 +31,14 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 10;
 
     color: #ededed;
     background: #081b29;
 }
 
 .languages {
-    min-width: 140px;
+    min-width: 120px;
     display: flex;
     flex: 0.5;
     justify-content: space-evenly;
@@ -67,7 +67,7 @@ body {
 
 .logo,
 .menu {
-    min-width: 180px;
+    min-width: 160px;
     flex: 4;
 }
 
@@ -199,6 +199,7 @@ body {
 .photo-content img {
     width: 300px;
     height: auto;
+    border-radius: 10px;
 }
 
 .aboutme,
@@ -509,42 +510,52 @@ footer a {
 
 
 @media(max-width:800px) {
+
     .menu-res {
         display: block;
         cursor: pointer;
     }
 
-    .menu-res .lineas{
+    .menu-res .lineas {
         width: 30px;
         height: 3px;
         background-color: #ededed;
         margin: 6px 0;
     }
 
-    .menu-nav{
-        height: 0;
-        position: absolute;
-        top: 70px;
+    .menu {
+        display: grid;
+        place-items: center;
+
+        position: fixed;
+        top: 60px;
         left: 0;
         right: 0;
         width: 100vw;
-        background-color: #139dff;
-        transition: 0.5s;        
-
-        flex-direction: column ;
-        align-items: center;
-        overflow: hidden;
+        background-color: #081b29;
+        clip-path: circle(0% at top left);
+        transition: clip-path 0.4s ease-in-out;
+        z-index: 20;
     }
 
-    .menu-nav.active{
-        height: 400px;
+    .menu.active .nav-link:target{
+        clip-path: circle(150% at top left);
     }
 
-    .menu-nav.active  a{
-        opacity: 1;
+    /* Clase para mostrar el menú */
+    .menu.active {
+        clip-path: circle(150% at top right);
     }
 
-     .menu-nav.active  a{
-        opacity: 1;
+    /* Navegación */
+    .menu-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 20px;
     }
- }
+
+    .nav-link {
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+}

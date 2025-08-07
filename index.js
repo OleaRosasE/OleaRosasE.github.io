@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuResposive = document.querySelector(".menu-res");
 
     menuResposive.onclick = function () {
-        navbar = document.querySelector(".menu-nav");
-        navbar.classList.toggle("active");
+        menu = document.querySelector(".menu");
+        menu.classList.toggle("active");
     };
 
     window.addEventListener("scroll", () => {
@@ -31,7 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    enlaces.forEach(link => {
+        link.addEventListener("click", () => {
+            const navbar = document.querySelector(".menu");
+            navbar.classList.remove("active");
 
+        });
+    });
 
     formulario.addEventListener("submit", async (e) => {
         e.preventDefault();
