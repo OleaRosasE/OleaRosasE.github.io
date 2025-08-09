@@ -1,3 +1,26 @@
+:root {
+    /*============ Colores ===========*/
+    --color-oscuro-titulo-h1: #ededed;
+    --color-oscuro-titulo-h2: #00abf0;
+    --color-oscuro-titulo-h3: #ededed;
+    --color-oscuro-texto: #ededed;
+    --color-oscuro-texto-2: #00abf0;
+    --color-oscuro-menu:#ededed;
+    --color-oscuro-icons:#ededed;
+    --color-oscuro-icons-2:#00abf0;
+    --color-oscuro-menu-hover: #00abf0;
+    --color-oscuro-texto-botones-hover:#081b29;
+    --color-oscuro-active:#00abf0;
+    --color-oscuro-fondo-botones-hover: #00abf0;
+    --color-oscuro-fondo-botones:transparent;
+    --color-oscuro-fondo-principal: #081b29;
+    --color-oscuro-fondo-cards: #13263a;
+    --color-oscuro-bordes:#00abf0;
+
+    /*============ Tamaños ===========*/
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +35,27 @@ html {
 }
 
 body {
-    background-color: #081b29;
-    color: #ededed;
+    /* background-color: var(--color-oscuro-fondo-principal); */
+    background: linear-gradient(to left, #172c42,#081b29);
+    color: var(--color-oscuro-texto);
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--color-oscuro-titulo-h1);
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-oscuro-titulo-h2);
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-oscuro-titulo-h3)
 }
 
 /*========================== HEADER =======================*/
@@ -33,8 +75,9 @@ body {
     left: 0;
     z-index: 10;
 
-    color: #ededed;
-    background: #081b29;
+    color: var(--color-oscuro-texto);
+    /* background: var(--color-oscuro-fondo-principal); */
+    background: linear-gradient(to left, #172c42,#081b29);
 }
 
 .languages {
@@ -57,7 +100,7 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background-color: #00abf0;
+    background-color: var(--color-oscuro-active);
     border-radius: 2px;
 }
 
@@ -78,7 +121,7 @@ body {
 }
 
 .logo a {
-    color: #ededed;
+    color: var(--color-oscuro-texto);
     font-weight: 600;
 }
 
@@ -92,14 +135,14 @@ body {
 }
 
 .menu-nav a {
-    color: #ededed;
+    color: var(--color-oscuro-menu);
     font-weight: 500;
     transition: .3s;
 }
 
 .menu-nav a:hover,
 .menu-nav a.active {
-    color: #00abf0;
+    color: var(--color-oscuro-active);
 }
 
 /*========================== HOME =======================*/
@@ -109,18 +152,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 17% 10% 60px;
-}
-
-.home h1 {
-    font-size: 56px;
-    font-weight: 700;
-}
-
-.home h3 {
-    font-size: 34px;
-    font-weight: 700;
-    color: #00abf0;
+    padding: 12% 10% 60px;
 }
 
 .home p {
@@ -130,6 +162,7 @@ body {
 .home-content,
 .photo-content {
     min-width: 300px;
+    min-height: 55vh;
     flex: 1;
 }
 
@@ -146,14 +179,14 @@ body {
 }
 
 .redes svg {
-    fill: #00abf0;
+    fill: var(--color-oscuro-icons-2);
     width: 70px;
     height: 70px;
     transition: 0.4s;
 }
 
-.redes a:hover {
-    fill: #ededed;
+.redes svg:hover {
+    fill: var(--color-oscuro-icons);
     transform: scale(1.1);
 }
 
@@ -176,16 +209,16 @@ body {
     height: 100%;
     font-size: 18px;
     font-weight: 600;
-    color: #00abf0;
+    color: var(--color-oscuro-texto-2);
 
     background: transparent;
-    border: 2px solid #00abf0;
+    border: 2px solid var(--color-oscuro-bordes);
     border-radius: 7px;
 }
 
 .buttons-box a:hover {
-    background-color: #00abf0;
-    color: #081b29;
+    background-color: var(--color-oscuro-active);
+    color: var(--color-oscuro-fondo-principal);
     transition: 0.4s;
 }
 
@@ -193,13 +226,14 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: start;
 }
 
 .photo-content img {
     width: 300px;
-    height: auto;
+    object-fit: contain;
     border-radius: 10px;
+  
 }
 
 .aboutme,
@@ -215,30 +249,6 @@ body {
     padding: 10vh 10% 0;
     gap: 20px;
 
-}
-
-.aboutme h2 {
-    font-size: 34px;
-    font-weight: 700;
-    color: #00abf0;
-}
-
-.technologies h2 {
-    font-size: 34px;
-    font-weight: 700;
-    color: #00abf0;
-}
-
-.projects h2 {
-    font-size: 34px;
-    font-weight: 700;
-    color: #00abf0;
-}
-
-.contact h2 {
-    font-size: 34px;
-    font-weight: 700;
-    color: #00abf0;
 }
 
 /*========================== ABOUT ME =======================*/
@@ -279,10 +289,6 @@ body {
     gap: 20px;
 }
 
-.technology-main h3 {
-    font-size: 28px;
-}
-
 .technology-block {
     width: 100%;
     height: auto;
@@ -295,8 +301,8 @@ body {
     gap: 50px;
     padding: 5%;
 
-    background-color: #13263a;
-    border: 2px solid #00abf0;
+    background-color: var(--color-oscuro-fondo-cards);
+    border: 2px solid var(--color-oscuro-bordes);
     border-radius: 7px;
 }
 
@@ -328,22 +334,17 @@ body {
 }
 
 .project-card {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
     padding: 5%;
-    overflow: hidden;
-    border: 2px solid #00abf0;
-    border-radius: 10px;
-    background-color: #13263a;
-}
 
-.project-card h3 {
-    color: #ededed;
-    font-size: 28px;
+    overflow: hidden;
+    border: 2px solid var(--color-oscuro-bordes);
+    border-radius: 10px;
+    background: linear-gradient(45deg,#172c42,#081b29);
 }
 
 .project-technologies {
@@ -360,6 +361,7 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 7px;
+
 }
 
 .project-img img {
@@ -375,25 +377,21 @@ body {
 
 .enlace {
     width: 110px;
-
-
-
-
 }
 
 .enlace a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: #00abf0;
+    color: var(--color-oscuro-texto);
     padding: 5px;
-    border: 2px solid #00abf0;
+    border: 2px solid var(--color-oscuro-bordes);
     border-radius: 7px;
 }
 
 .enlace a:hover {
     background-color: #00abf0;
-    color: #ededed;
+    color: var(--color-oscuro-texto-botones-hover);
     transition: 0.4s;
 }
 
@@ -409,7 +407,7 @@ body {
 
 .technology-button svg {
     width: 24px;
-    fill: #ededed;
+    fill: var(--color-oscuro-icons);
 }
 
 /*=================== Contact Form ================*/
@@ -428,7 +426,7 @@ form {
     background-color: #13263a;
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 2px solid #00abf0;
+    border: 2px solid var(--color-oscuro-bordes);
     border-radius: 10px;
 
 }
@@ -442,16 +440,16 @@ form button {
     padding: 10px 5px;
 
     font-size: 18px;
-    color: #00abf0;
-    border: 2px solid #00abf0;
+    color: var(--color-oscuro-texto);
+    border: 2px solid var(--color-oscuro-bordes);
     border-radius: 7px;
     background-color: transparent;
 }
 
 form button:hover {
     transition: 0.4s;
-    background-color: #00abf0;
-    color: #ededed;
+    background-color: var(--color-oscuro-fondo-botones-hover);
+    color: var(--color-oscuro-texto-botones-hover);
     cursor: pointer;
 }
 
@@ -472,13 +470,13 @@ textarea {
     padding: 0.5em 1em;
     border: 0;
     font-size: 1.2em;
-    color: #ededed;
+    color: var(--color-oscuro-texto);
     background: transparent;
 }
 
 fieldset {
     padding: 0;
-    border: 2px solid #00abf0;
+    border: 2px solid var(--color-oscuro-bordes);
     border-radius: 5px;
 }
 
@@ -505,7 +503,7 @@ footer {
 }
 
 footer a {
-    color: #ededed;
+    color: var(--color-oscuro-texto);
 }
 
 
@@ -519,7 +517,7 @@ footer a {
     .menu-res .lineas {
         width: 30px;
         height: 3px;
-        background-color: #ededed;
+        background-color: var(--color-oscuro-texto);
         margin: 6px 0;
     }
 
@@ -528,17 +526,17 @@ footer a {
         place-items: center;
 
         position: fixed;
-        top: 60px;
+        top: 50px;
         left: 0;
         right: 0;
         width: 100vw;
-        background-color: #081b29;
+        background-color: var(--color-oscuro-fondo-principal);
         clip-path: circle(0% at top left);
         transition: clip-path 0.4s ease-in-out;
         z-index: 20;
     }
 
-    .menu.active .nav-link:target{
+    .menu.active .nav-link:target {
         clip-path: circle(150% at top left);
     }
 
@@ -559,3 +557,4 @@ footer a {
         font-size: 1.2rem;
     }
 }
+
