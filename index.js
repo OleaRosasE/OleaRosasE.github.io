@@ -4,11 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const secciones = document.querySelectorAll("section");
     const enlaces = document.querySelectorAll(".nav-link");
     const menuResposive = document.querySelector(".menu-res");
+    const menu = document.querySelector(".menu");
 
-    menuResposive.onclick = function () {
-        menu = document.querySelector(".menu");
-        menu.classList.toggle("active");
-    };
+
+
+    document.addEventListener("click", (e) => {
+    // Si el menú está activo y el click NO fue dentro del menú
+    if (menu.classList.contains("active") && !menu.contains(e.target) && e.target !== btnMenu) {
+        menu.classList.remove("active");
+    }
+});
+
+
 
     window.addEventListener("scroll", () => {
 
@@ -31,11 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    menuResposive.onclick = function () {
+        menu.classList.toggle("active");
+    };
+
     enlaces.forEach(link => {
         link.addEventListener("click", () => {
-            const navbar = document.querySelector(".menu");
-            navbar.classList.remove("active");
-
+            menu.classList.remove("active");
         });
     });
 

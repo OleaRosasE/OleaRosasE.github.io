@@ -530,14 +530,14 @@ footer a {
         left: 0;
         right: 0;
         width: 100vw;
-        background-color: var(--color-oscuro-fondo-principal);
-        clip-path: circle(0% at top left);
+        background: linear-gradient(to left, #172c42,#081b29);
+        clip-path: circle(0% at top right);
         transition: clip-path 0.4s ease-in-out;
         z-index: 20;
     }
 
     .menu.active .nav-link:target {
-        clip-path: circle(150% at top left);
+        clip-path: circle(150% at top right);
     }
 
     /* Clase para mostrar el menú */
