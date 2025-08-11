@@ -17,8 +17,8 @@
     --color-oscuro-bordes: #00abf0;
 
     /*============ Tamaños ===========*/
-    --width-card-container: 310px;
-    --height-card-container: 450px;
+    --width-card-container: 300px;
+    --height-card-container: 400px;
 
 }
 
@@ -66,7 +66,14 @@ h4 {
     color: var(--color-oscuro-titulo-2);
 }
 
-section, .home-content, .photo-content, .aboutme-content, .aboutme-skills,.technology-block, .project-card, .contact {
+section,
+.home-content,
+.photo-content,
+.aboutme-content,
+.aboutme-skills,
+.technology-block,
+.project-card,
+.contact {
     view-timeline-name: --image;
     view-timeline-axis: block;
 
@@ -171,7 +178,7 @@ section, .home-content, .photo-content, .aboutme-content, .aboutme-skills,.techn
     flex-wrap: wrap;
     align-content: flex-end;
     align-items: center;
-    padding:10vh 10% 0;
+    padding: 10vh 10% 0;
 }
 
 .home p {
@@ -183,7 +190,6 @@ section, .home-content, .photo-content, .aboutme-content, .aboutme-skills,.techn
     min-width: 300px;
     min-height: 40vh;
     flex: 1;
-
 }
 
 .home-content p {
@@ -206,7 +212,7 @@ section, .home-content, .photo-content, .aboutme-content, .aboutme-skills,.techn
 
 .redes svg:hover {
     fill: var(--color-oscuro-icons);
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 
@@ -343,7 +349,7 @@ section, .home-content, .photo-content, .aboutme-content, .aboutme-skills,.techn
 }
 
 .technology:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 
@@ -379,23 +385,21 @@ section, .home-content, .photo-content, .aboutme-content, .aboutme-skills,.techn
 
     width: var(--width-card-container);
     height: var(--height-card-container);
-    overflow: hidden;
+    /* overflow: hidden; */
 
     border-radius: 7px;
-    background-color: var(--color-oscuro-bordes);
-    /* box-shadow: 1px 1px 2px var(--color-oscuro-bordes); */
+    background: transparent;
     position: relative;
     z-index: 0;
 }
 
-.project-card::before {
+/* .project-card::before {
     content: "";
     position: absolute;
     width: calc(var(--width-card-container) + 50px);
     height: calc(var(--height-card-container) + 130px);
     background-image: conic-gradient(#ffffff 1deg, transparent 20deg);
     animation: rotar 10s linear infinite;
-
 }
 
 .project-card::after {
@@ -405,23 +409,63 @@ section, .home-content, .photo-content, .aboutme-content, .aboutme-skills,.techn
     height: calc(var(--height-card-container) - 4px);
     background-color: var(--color-oscuro-fondo-cards);
     border-radius: 7px;
+} */
 
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: 1s;
 }
 
+.front {
+    border: 2px solid var(--color-oscuro-bordes);
+    transform: perspective(600px) rotateY(0deg);
+}
 
+.front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.front span {
+    position: absolute;
+    bottom: 0;
 
-.project {
-    width: calc(var(--width-card-container));
-    height: calc(var(--height-card-container));
+    width: 100%;
+    height: 10%;
+    font-size: 24px;
+    color: var(--color-oscuro-texto);
+    font-weight: 300;
+    background: rgba(0, 0, 0, .4);
+    display: grid;
+    place-items: center;
+}
+
+.back {
+    transform: perspective(600px) rotateY(180deg);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 20px;
     padding: 5% 10%;
-    overflow: hidden;
-    z-index: 2;
+    background-color: var(--color-oscuro-fondo-cards);
+    color: var(--color-oscuro-texto);
+    border: 2px solid var(--color-oscuro-bordes);
+}
+
+.project-card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.project-card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
 }
 
 .project-technologies {
@@ -431,22 +475,6 @@ section, .home-content, .photo-content, .aboutme-content, .aboutme-skills,.techn
     gap: 20px;
 }
 
-.project-img {
-    width: 250px;
-    height: 300px;
-    overflow: hidden;
-    object-fit: contain;
-    display: flex;
-    justify-content: center;
-    border-radius: 7px;
-
-}
-
-.project-img img {
-    width: 250px;
-    z-index: 4;
-}
-
 .enlaces {
     width: 100%;
     display: flex;
@@ -454,22 +482,21 @@ section, .home-content, .photo-content, .aboutme-content, .aboutme-skills,.techn
     padding: 0 5%;
 }
 
-.enlace {
-    width: 110px;
-}
-
-.enlace a {
+.enlaces a {
+    width: 100px;
+    height: 40px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: var(--color-oscuro-texto);
     padding: 5px;
-    border: 2px solid var(--color-oscuro-bordes);
+
+    color: var(--color-oscuro-texto);
+    border: 1px solid var(--color-oscuro-bordes);
     border-radius: 7px;
     transition: 0.4s;
 }
 
-.enlace a:hover {
+.enlaces a:hover {
     background-color: #00abf0;
     color: var(--color-oscuro-texto-botones-hover);
 }
