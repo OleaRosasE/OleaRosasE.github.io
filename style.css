@@ -34,6 +34,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px; /* Ajusta según la altura de tu header */
 }
 
 body {
@@ -66,7 +67,6 @@ h4 {
     color: var(--color-oscuro-titulo-2);
 }
 
-section,
 .home-content,
 .photo-content,
 .aboutme-content,
@@ -79,7 +79,7 @@ section,
 
     animation-timeline: --image;
     animation-name: show;
-    animation-range: entry 25% cover 30%;
+    animation-range: entry 20% cover 40%;
     animation-fill-mode: both;
 }
 
@@ -266,11 +266,12 @@ section,
 .projects,
 .contact {
     width: 100%;
+    min-height: 70vh;
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
-    min-height: 80vh;
+    flex-direction: column;    
     padding: 5vh 10%;
     gap: 20px;
 
